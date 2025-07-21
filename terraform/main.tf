@@ -1,6 +1,6 @@
-#resource "aws_iam_user" "test_user" {
-# name = "test-user"
-#tags = {
-# Purpose = "Testing"
-#}
-#}
+resource "aws_iam_user" "test_user" {
+  name = "redapple-user"
+  tags = {
+    Purpose = "Testing"
+  }
+}
