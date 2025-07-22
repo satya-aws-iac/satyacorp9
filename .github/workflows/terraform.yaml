@@ -1,3 +1,4 @@
+
 name: Terraform AWS Deploy
 
 on:
@@ -33,7 +34,7 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           audience: sts.amazonaws.com
 
-      - name: Setup Terraform
+      - name: i waup Terraform
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
