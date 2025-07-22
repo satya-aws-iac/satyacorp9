@@ -34,8 +34,9 @@ jobs:
           aws-region: ${{ env.AWS_REGION }}
           audience: sts.amazonaws.com
 
-      - name: i waup Terraform
-        uses: hashicorp/setup-terraform@v3
+      - name: Set output example
+        id: example_step
+        run: echo "my_output=some_value" >> $GITHUB_OUTPUT
 
       - name: Terraform Init
         run: terraform init
