@@ -1,7 +1,5 @@
 
 name: Terraform AWS Deploy
-id: example_step
-  run: echo "my_output=some_value" >> $GITHUB_OUTPUT
 
 on:
   push:
