@@ -25,11 +25,11 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ secrets.SECRETS_ROLE_TO_ASSUME }} # Replace with your OIDC role ARN
-          role-session-name: satyacorp-oidc # Unique session name
+          role-to-assume: ${{ secrets.SECRETS_ROLE_TO_ASSUME }} # I have set this in the repository secrets
+          #role-session-name: satyacorp-oidc # Unique session name
           aws-region: eu-west-2
           # Use OIDC authentication
-          audience: sts.amazonaws.com #
+          audience: sts.amazonaws.com 
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
