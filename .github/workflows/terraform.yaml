@@ -25,7 +25,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{SECRETS_ROLE_TO_ASSUME}} # add the role ARN to assume in github secrets
+          role-to-assume: ${{ SECRETS_ROLE_TO_ASSUME }} # add the role ARN to assume in github secrets
           #role-session-name: satyacorp-oidc # Unique session name
           aws-region: eu-west-2
           # Use OIDC authentication
