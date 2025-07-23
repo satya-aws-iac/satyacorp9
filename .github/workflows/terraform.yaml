@@ -20,18 +20,21 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # Already using v4, which is good
 
       - name: Configure AWS credentials (OIDC)
-        uses: aws-actions/configure-aws-credentials@v1
+        # --- CHANGE HERE: Update to v4 ---
+        uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.SECRETS_ROLE_TO_ASSUME }} # I have set this in the repository secrets
-          #role-session-name: satyacorp-oidc # Unique session name
-          aws-region: eu-west-2
-          # Use OIDC authentication
-          audience: sts.amazonaws.com 
+          aws-region: eu-west-2 # AWS region to use
+          role-session-name: GitHubActions # Name for the session
+          audience: sts.amazonaws.com # Audience for OIDC authentication
 
       - name: Setup Terraform
+        # --- CHANGE HERE: Ensure you're on the latest patch of v3, or consider v4 if available and compatible ---
+        # As of my last update, v3 is still the latest major for setup-terraform.
+        # Ensure your 'v3' tag pulls the latest patch.
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
