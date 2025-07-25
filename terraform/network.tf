@@ -2,7 +2,7 @@
 # VPC Module
 
 module "vpc" {
-  source                   = "modules-registry/aws_vpc"
+  source                   = "../modules-registry/aws_vpc"
   aws_region               = var.aws_region
   vpc_name                 = var.vpc_name
   vpc_cidr                 = var.vpc_cidr
