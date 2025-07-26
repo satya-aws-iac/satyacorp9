@@ -1,4 +1,4 @@
-resource "aws-eip" "nat-eip" {
+resource "aws_eip" "nat-eip" {
   domain = "vpc"
   tags = {
     Name = "stage-nat-eip"
