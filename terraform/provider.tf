@@ -9,7 +9,17 @@ terraform {
   }
 }
 
-#Aws provider configuration
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0" # Use an appropriate version constraint
+    }
+  }
+}
+
+# Optional: if you have provider configuration
 provider "aws" {
-  region = var.aws_region
+  region = var.aws_region # Replace with your desired AWS region
+  # ... other AWS provider configurations
 }
