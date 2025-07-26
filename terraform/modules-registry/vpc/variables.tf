@@ -63,8 +63,3 @@ variable "vpc_secondary_name" {
   type        = string
 }
 
-variable "nat_gateway_count" {
-  type        = number
-  description = "Number of NAT Gateways to create"
-  default     = 1
-}
