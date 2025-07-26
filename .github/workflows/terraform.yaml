@@ -53,7 +53,7 @@ jobs:
         run: terraform plan
         working-directory: terraform
 
-      #- #name: Terraform apply
-        #if: github.ref == 'refs/heads/main'
-        #run: terraform apply -auto-approve
-        #working-directory: terraform
+      - name: Terraform apply
+        if: github.ref == 'refs/heads/main'
+        run: terraform apply -auto-approve
+        working-directory: terraform
