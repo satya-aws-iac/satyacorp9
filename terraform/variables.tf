@@ -18,30 +18,22 @@ variable "vpc_name" {
 
 }
 
-variable "vpc_secondary_name" {
-  description = "Name of the secondary VPC"
-  type        = string
-}
+
 
 variable "vpc_cidr" {
   description = "CIDR block for the VPC"
   type        = string
 }
 
-variable "vpc_cidr_secondary" {
-  description = "CIDR block for the secondary VPC"
-  type        = string
-}
+
 
 variable "aws_azs" {
   description = "List of availability zones for the primary VPC"
   type        = list(any)
 }
 
-variable "aws_azs_secondary" {
-  description = "List of availability zones for the secondary VPC"
-  type        = list(any)
-}
+
+
 
 variable "global_tags" {
   type = map(string)
