@@ -6,8 +6,7 @@ resource "aws_subnet" "public-subnet" {
 
   tags = {
     "Name"                                      = "stage-public-subnet-us-west-2a"
-    "kubernetes.io/role/elb"                    = "1"
-    "kubernetes.io/cluster/${var.cluster_name}" = "owned"
+    
   }
 }
 
@@ -20,8 +19,7 @@ resource "aws_subnet" "public_zone2" {
 
   tags = {
     "Name"                                      = "stage-public-subnet-us-west-2b"
-    "kubernetes.io/role/elb"                    = "1"
-    "kubernetes.io/cluster/${var.cluster_name}" = "owned"
+  
   }
 
 }

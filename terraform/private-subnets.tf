@@ -5,8 +5,7 @@ resource "aws_subnet" "private-subnet" {
 
   tags = {
     Name                                        = "stage-private-subnet-eu-west-2a"
-    "kubernetes.io/role/internal-elb"           = "1"
-    "kubernetes.io/cluster/${var.cluster_name}" = "owned"
+   
   }
 
 }
@@ -17,8 +16,7 @@ resource "aws_subnet" "private_zone2" {
   availability_zone = "eu-west-2b"
   tags = {
     Name                                        = "stage-private-subnet-eu-west-2b"
-    "kubernetes.io/role/internal-elb"           = "1"
-    "kubernetes.io/cluster/${var.cluster_name}" = "owned"
+   
   }
 
 }
