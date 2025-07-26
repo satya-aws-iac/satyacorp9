@@ -44,5 +44,12 @@ variable "aws_azs_secondary" {
 }
 
 variable "global_tags" {
-  type = string
+  type = map(string)
+}
+
+variable "internet_gateway_enabled" {
+  description = "Enable Internet Gateway"
+  type        = number
+  default     = 1
+
 }
