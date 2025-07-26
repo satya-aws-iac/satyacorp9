@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "tfstatebucket-satya" {
 
 
 
-# Create DynamoDB table for state locking
+## Create DynamoDB table for state locking
 resource "aws_dynamodb_table" "tfstate-lock-table-satya" {
   name                        = "tfstate-lock-table-satya"
   billing_mode                = "PAY_PER_REQUEST"
