@@ -1,28 +1,11 @@
-variable "namespace" {
-  description = "Namespace for the resources"
-  type        = string
-
-}
-
-
-variable "aws_region" {
-  description = "AWS region"
-  type        = string
-  default     = "eu-west-2"
-}
-
-variable "environment" {
-  description = "Environment name"
-  type        = string
-}
-
-variable "environment" {
-  description = "Environment name"
+# File: terraform/modules/vpc/variables.tf
+variable "vpc_name" {
+  description = "Name of the VPC"
   type        = string
 }
 
 variable "vpc_cidr" {
-  description = "CIDR block for VPC"
+  description = "CIDR block for the VPC"
   type        = string
 }
 
@@ -39,6 +22,23 @@ variable "private_subnet_cidrs" {
 variable "public_subnet_cidrs" {
   description = "CIDR blocks for public subnets"
   type        = list(string)
+}
+
+variable "enable_nat_gateway" {
+  description = "Enable NAT Gateway"
+  type        = bool
+  default     = true
+}
+
+variable "single_nat_gateway" {
+  description = "Use single NAT Gateway"
+  type        = bool
+  default     = true
+}
+
+variable "environment" {
+  description = "Environment name"
+  type        = string
 }
 
 variable "tags" {
