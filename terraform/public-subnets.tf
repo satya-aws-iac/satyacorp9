@@ -5,8 +5,8 @@ resource "aws_subnet" "public-subnet" {
   availability_zone = "eu-west-2a"
 
   tags = {
-    "Name"                                      = "stage-public-subnet-us-west-2a"
-    
+    "Name" = "stage-public-subnet-us-west-2a"
+
   }
 }
 
@@ -18,8 +18,8 @@ resource "aws_subnet" "public_zone2" {
 
 
   tags = {
-    "Name"                                      = "stage-public-subnet-us-west-2b"
-  
+    "Name" = "stage-public-subnet-us-west-2b"
+
   }
 
 }

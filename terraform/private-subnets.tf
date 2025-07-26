@@ -4,8 +4,8 @@ resource "aws_subnet" "private-subnet" {
   availability_zone = "eu-west-2a"
 
   tags = {
-    Name                                        = "stage-private-subnet-eu-west-2a"
-   
+    Name = "stage-private-subnet-eu-west-2a"
+
   }
 
 }
@@ -15,8 +15,8 @@ resource "aws_subnet" "private_zone2" {
   cidr_block        = "10.0.96.0/19"
   availability_zone = "eu-west-2b"
   tags = {
-    Name                                        = "stage-private-subnet-eu-west-2b"
-   
+    Name = "stage-private-subnet-eu-west-2b"
+
   }
 
 }
