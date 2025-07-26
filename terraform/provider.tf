@@ -9,6 +9,7 @@ terraform {
   }
 }
 
+#Aws provider configuration
 provider "aws" {
   region = var.aws_region
 }
