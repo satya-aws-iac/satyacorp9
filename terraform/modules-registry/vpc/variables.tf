@@ -53,3 +53,12 @@ variable "nat_gateway_count" {
   type        = number
   default     = 1
 }
+
+variable "aws_region" {
+  description = "AWS region"
+  type        = string
+}
+variable "vpc_secondary_name" {
+  description = "Name of the secondary VPC"
+  type        = string
+}
